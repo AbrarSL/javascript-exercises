@@ -1,8 +1,10 @@
-const removeFromArray = function(array, element) {
+const removeFromArray = function(array, ...elements) {
 
-  while (array.indexOf(element) != -1) {
-    array.splice(array.indexOf(element), 1);
-  }
+  elements.forEach((element) => {
+    while (array.indexOf(element) != -1) {
+      array.splice(array.indexOf(element), 1);
+    }
+  });
 
   return array;
 };
