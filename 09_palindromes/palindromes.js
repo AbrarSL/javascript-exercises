@@ -1,5 +1,7 @@
 const palindromes = function(sentence) {
-  return (sentence === sentence.split('').reverse().join(''));
+  let sanitizedString = sentence.toLowerCase().replace(/[^a-z]/g, '');
+
+  return sanitizedString === sanitizedString.split('').reverse().join('');
 };
 
 // Do not edit below this line
